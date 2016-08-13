@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>fiona|myBlog</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		body,html{
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+		}
+		.content{
+			height: 100%;
+			width: 100%;
+			position: relative;
+		}
+		.navigation{
+			height: 100%;
+			width:100%;
+		}
+		.nav_txt{
+			height: 91px;
+			line-height: 91px;
+			color: #fff;
+			font-size:20px;
+			font-weight: bold;
+			text-align: right;
+			cursor: pointer;
+			transition: all 0.2s linear;
+		}
+		.nav_txt:nth-child(1){
+			background-color: #e8b118;
+			opacity: 1;
+		}
+		.nav_txt:nth-child(1):hover{
+			opacity: 0.8
+		}
+		.nav_txt:nth-child(2){
+			background-color: #dc7913;
+		}
+		.nav_txt:nth-child(2):hover{
+			opacity: 0.8
+		}
+		.nav_txt:nth-child(3){
+			background-color: #ce1131;
+		}
+		.nav_txt:nth-child(3):hover{
+			opacity: 0.8
+		}
+		.nav_txt:nth-child(4){
+			background-color: #a71955;
+		}
+		.nav_txt:nth-child(4):hover{
+			opacity: 0.8
+		}
+		.nav_txt:nth-child(5){
+			background-color: #33619f;
+		}
+		.nav_txt:nth-child(5):hover{
+			opacity: 0.8
+		}
+		.nav_txt:nth-child(6){
+			background-color: #149b70;
+		}
+		.nav_txt:nth-child(6):hover{
+			opacity: 0.8
+		}
+		.nav_txt:nth-child(7){
+			background-color: #79b053;
+		}
+		.nav_txt:nth-child(7):hover{
+			opacity: 0.8
+		}
+		.img{
+			vertical-align: middle;
+		}
+		.left_part{
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			left: -370px;
+			top:0;
+			z-index: 5;
+			background-color: #fff;
+			border-radius: 350px;
+			overflow: hidden;
+		} 
+		.blog_title{
+			position: absolute;
+			left: 400px; 
+			top: 10px;
+			font-size:25px;
+			font-weight: bold;
+			color: #146BB0;
+		}
+		.title_tips{
+			font-size: 20px;
+			font-weight: bold;
+		}
+		.description{
+			position: absolute;
+			list-style: none;
+			left: 420px;
+			top:150px;
+		}
+		.des_txt{
+			color: #333959;
+			font-size:25px;
+			opacity: 0;
+			position: absolute;
+			left: 0;
+			right: 0;
+			width: 700px;
+			line-height: 70px;
+		}
+		.des_txt:nth-child(1){
+			opacity: 1;
+		}
+		.big_font{
+			font-size: 50px;
+		}
+		.des_txt:nth-child(1) span{
+			color: #e8b118;
+		}
+		.des_txt:nth-child(2) span{
+			color: #dc7913;
+		}
+		.des_txt:nth-child(3) span{
+			color: #ce1131;
+		}
+		.des_txt:nth-child(4) span{
+			color: #a71955;
+		}
+		.des_txt:nth-child(5) span{
+			color: #33619f;
+		}
+		.des_txt:nth-child(6) span{
+			color: #149b70;
+		}
+		.des_txt:nth-child(7) span{
+			color: #79b053;
+		}
+
+		@keyframes scale_in{
+			from{
+				opacity: 0;
+				transform:scale(2);
+			}
+			to{
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
+
+		@keyframes scale_out{
+			from{
+				transform: scale(1);
+				opacity: 1;
+			}
+			to{
+				transform: scale(2);
+				opacity: 0;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="content">
+		<div class="navigation">
+			<ul class="nav">
+				<li class="nav_txt" id="myHome">
+					我的主页
+					<img src="./images/home.png" alt="我的主页" class="img">
+				</li>
+				<li class="nav_txt" id="myInfo">
+					个人信息
+					<img src="./images/me.png" alt="个人信息" class="img"> 
+				</li>
+				<li class="nav_txt" id="myPhoto">
+					我的相册
+					<img src="./images/pic.png" alt="我的相册" class="img">
+				</li>
+				<li class="nav_txt" id="myNodes"> 
+					我的随笔
+					<img src="./images/note.png" alt="我的随笔" class="img">
+				</li>
+				<li class="nav_txt" id="myWebsite">
+					我的临摹网站
+					<img src="./images/vedio.png" alt="我的临摹网站" class="img">
+				</li>
+				<li class="nav_txt" id="myWork">
+					我的工作经历
+					<img src="./images/file.png" alt="我的工作经历" class="img">
+				</li>
+				<li class="nav_txt" id="myGame">
+					我的游戏
+					<img src="./images/fly.png" alt="我的游戏" class="img">
+				</li>
+			</ul>
+		</div>
+		<div class="left_part">
+			<div class="blog_title">
+				From FIONA
+				<span class="title_tips">|my blog</span>
+			</div>
+			<ul class="description">
+				<li class="des_txt" id="myhome_des">
+					<span class="big_font">欢</span>迎来到我的个人主页，希望你会喜欢这里。<br>
+					我是一名<span class="big_font">前端</span>工程师<br>
+					偏执的喜欢<span class="big_font">平面</span>化设计
+				</li>
+				<li class="des_txt" id="myinfo_des">
+					我的名字叫<span class="big_font">fiona</span><br>
+					喜欢<span class="big_font">c</span>ss,
+					喜欢<span class="big_font">JS</span>。<br>
+					我不会P<span class="big_font">H</span>P,
+					可我是一个好前端。
+				</li>
+				<li class="des_txt" id="myphoto_des">
+					我有一条叫<span class="big_font">ivan</span>的狗<br>
+					比我<span class="big_font">上相</span>的多哦。
+				</li>
+				<li class="des_txt" id="mynote_des">
+					闲来<span class="big_font">无事</span>，喜欢写一些东西，
+					可惜最近一点也不<span class="big_font">闲</span>...<br>
+					<span class="big_font">喜欢</span>出去玩，
+					<span class="big_font">更喜欢</span>宅在家。
+				</li>
+				<li class="des_txt" id="mywebsite_des">
+					喜欢的<span class="big_font">主页</span>就要自己做一遍<br>
+					这个过程积累了很多的<span class="big_font">技巧</span><br>
+					这个网站就是临摹<span class="big_font">大神</span>的网站<br>
+					<span class="big_font">详细</span>请参见我的临摹网站。<br>
+				</li>
+				<li class="des_txt" id="mywork_des">
+					<span class="big_font">努力</span>工作。努力<span class="big_font">学习</span>。<br>
+					<span class="big_font">不是</span>最强。也要做到<span class="big_font">最好</span>。<br>
+					不想吃<span class="big_font">天鹅肉</span>的癞蛤蟆，
+					不是好<span class="big_font">癞蛤蟆</span>。
+				</li>
+				<li class="des_txt" id="mygame_des">
+					想到什么，就<span class="big_font">做</span>什么。<br>
+					<span class="big_font">当然</span>，前提是要有时间...
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+		window.onload=function(){
+			var des_txt = getClassName("des_txt");
+			
+			var nav_txt = getClassName("nav_txt");
+			var len = nav_txt.length;
+			var curr=0;
+
+			for(var i=0;i<len;i++){
+				
+				(function(m){
+					nav_txt[i].onmouseover =function(){
+						hiddens();
+						if(curr!=m){
+							des_txt[curr].style.animation = "scale_out 0.5s linear";
+						}
+						nav_txt[m].style.paddingRight = "30px";
+						des_txt[m].style.opacity="1"
+						des_txt[m].style.animation="scale_in 0.5s linear";
+						curr = m;
+					}
+					nav_txt[i].onmouseout =function(){
+						nav_txt[m].style.paddingRight = "0";
+					}
+				})(i)
+
+			}
+
+			
+		}
+
+		function hiddens(){
+			var des_txt = getClassName("des_txt");
+			var len = des_txt.length;
+			for(var i=0;i<len;i++){
+				des_txt[i].style.opacity = "0";
+				//des_txt[i].style.animation = "scale_in 0.2s linear";
+			}
+		}
+
+		//获取className
+		function getClassName(clsName,Parent){
+
+			var oParent = Parent?document.getElementById(Parent):document;
+			var eles =[];
+			var elements = oParent.getElementsByTagName("*");
+
+			for(var i=0;i<elements.length;i++){
+				if(clsName == elements[i].className){
+					eles.push(elements[i]);
+				}
+			}
+			return eles;
+		}
+	</script>
+</body>
+</html>
